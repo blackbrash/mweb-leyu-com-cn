@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK体育 · 知识库入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7f4ed;
+            font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", Georgia, "Times New Roman", serif;
+            color: #2d2b28;
+            line-height: 1.75;
+            padding: 2rem 1.2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 780px;
+            width: 100%;
+            background: #fcfaf5;
+            border-radius: 20px;
+            padding: 2.8rem 2.2rem;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.02);
+            border: 1px solid #ede8df;
+            transition: box-shadow 0.2s ease;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #1f1c18;
+            border-left: 5px solid #b89a7a;
+            padding-left: 1.1rem;
+            margin-bottom: 1.6rem;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #6f6559;
+            margin-top: -0.8rem;
+            margin-bottom: 2.6rem;
+            padding-left: 1.1rem;
+            border-left: 5px solid transparent;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-top: 2.2rem;
+            margin-bottom: 0.8rem;
+            color: #3a332d;
+            letter-spacing: 0.01em;
+            border-bottom: 1px dashed #dcd2c4;
+            padding-bottom: 0.2rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            word-break: break-word;
+        }
+
+        a {
+            color: #8b6d4e;
+            text-decoration: none;
+            border-bottom: 1px solid #d3c3b0;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #543f2e;
+            border-bottom-color: #8b6d4e;
+        }
+
+        .quote-block {
+            background: #f3efe7;
+            border-left: 4px solid #b89a7a;
+            padding: 1.2rem 1.6rem;
+            margin: 1.8rem 0;
+            border-radius: 0 10px 10px 0;
+            font-size: 0.98rem;
+            color: #3a332d;
+        }
+
+        .quote-block strong {
+            color: #5c4a39;
+            font-weight: 500;
+        }
+
+        .notice-box {
+            background: #f6f0e7;
+            border-radius: 14px;
+            padding: 1.2rem 1.5rem;
+            margin: 2rem 0 1.5rem 0;
+            border: 1px solid #e3d9cb;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .notice-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.8rem 0 1.2rem 0;
+        }
+
+        .info-card {
+            background: #f9f5ee;
+            border-radius: 14px;
+            padding: 1.2rem 1.4rem;
+            border: 1px solid #e8dfd3;
+            transition: background 0.15s;
+        }
+
+        .info-card:hover {
+            background: #f4ede3;
+        }
+
+        .info-card .label {
+            font-weight: 500;
+            color: #5c4a39;
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+
+        .info-card .desc {
+            font-size: 0.95rem;
+            color: #3f382f;
+            line-height: 1.6;
+        }
+
+        .faq-item {
+            margin: 1.4rem 0;
+            border-bottom: 1px solid #e8dfd3;
+            padding-bottom: 1rem;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #4d3f32;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-a {
+            color: #4d443b;
+            font-size: 0.95rem;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, #e3d9cb, transparent);
+            margin: 2.2rem 0 0.8rem 0;
+        }
+
+        .footer-note {
+            margin-top: 2.8rem;
+            font-size: 0.9rem;
+            color: #7a6f62;
+            text-align: center;
+            border-top: 1px solid #ebe3d8;
+            padding-top: 1.8rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page {
+                padding: 2rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+                padding-left: 0.8rem;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .quote-block {
+                padding: 1rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .page {
+                padding: 1.5rem 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .subhead {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <h1>MK体育 · 知识库入口</h1>
+    <div class="subhead">再次访问，收藏，持续关注</div>
+
+    <p>
+        每一次回到熟悉的地方，总会有新的发现。对于长期关注体育资讯的朋友而言，<a href="https://official--mk.com">MK体育</a>
+        并不是一个需要刻意记忆的地址，而更像是一处可以随时停留的站点。无论是比赛回顾、赛季前瞻，还是数据与讨论的汇聚，它都保持着一种克制而持续的更新节奏。
+    </p>
+
+    <p>
+        很多人最初是因为某一项赛事或某一场对决来到这里，后来慢慢养成了隔段时间就回来看一看的习惯。没有喧哗的推送，也没有浮夸的标题，页面里更多的是扎实的内容和清晰的条目——这也是我们设计这个知识库入口页面的初衷：让每一次访问都像翻开一本常读常新的手册。
+    </p>
+
+    <h2>目录感的布局</h2>
+    <p>
+        整个页面采用文章排版的节奏，标题与段落之间留出舒适的间距，信息区块按照功能划分。你可以快速定位到提示区、相关信息区或者常见问题摘要，而不需要在杂乱的结构中寻找。左侧的色块与边框起到了视觉引导的作用，让视线自然地从一处流动到另一处。
+    </p>
+
+    <div class="quote-block">
+        <strong>关于再次访问</strong><br>
+        如果你已经将 MK体育 加入浏览器书签，或者曾在聊天中收藏过链接，那么每一次打开都会看到最新的内容焦点。建议定期清理缓存或刷新页面，以确保看到的是最新的资讯摘要。
+    </div>
+
+    <h2>说明区 · 使用场景</h2>
+    <p>
+        MK体育 的内容偏向于深度整理与归纳，适合在以下几种情境下浏览：赛前想做快速功课、赛后想了解不同角度的观点、或者只是想在安静的午后随意翻阅体育相关的话题。这里没有自动播放的视频或弹窗干扰，阅读体验更接近一本杂志。
+    </p>
+
+    <div class="notice-box">
+        <p><strong>📌 收藏与持续关注</strong></p>
+        <p>如果你觉得这个站点值得长期留意，不妨将它添加到浏览器的书签栏，或者使用笔记软件保存链接。很多读者反馈，每隔一两周回来，总能发现新的整理专题和讨论汇总。持续关注并不意味着每天都要打开，而是让它在你的信息源中占据一个安静而可靠的位置。</p>
+    </div>
+
+    <h2>相关信息区</h2>
+    <div class="info-grid">
+        <div class="info-card">
+            <span class="label">内容类型</span>
+            <span class="desc">赛事回顾 · 赛季盘点 · 数据整理 · 观点摘录 · 背景阅读</span>
+        </div>
+        <div class="info-card">
+            <span class="label">更新节奏</span>
+            <span class="desc">不定期更新，但每篇都有一定篇幅和深度，不追求日更</span>
+        </div>
+        <div class="info-card">
+            <span class="label">适合读者</span>
+            <span class="desc">体育爱好者、信息收集者、想避开浮躁资讯的读者</span>
+        </div>
+        <div class="info-card">
+            <span class="label">访问方式</span>
+            <span class="desc">直接输入 <a href="https://official--mk.com">MK体育</a> 即可，无需注册或登录</span>
+        </div>
+    </div>
+
+    <h2>提示区</h2>
+    <p>
+        如果你是通过搜索引擎或他人推荐第一次找到这里，不妨先花几分钟浏览一下首页的整体结构。很多有价值的内容并不在第一时间显现，而是藏在分类标签或归档链接当中。另外，请留意页面的字体与版式——我们特意选择了更适合长时间阅读的衬线字体和米白背景，希望能够减轻眼睛的负担。
+    </p>
+
+    <div class="divider"></div>
+
+    <h2>FAQ 摘要</h2>
+    <div class="faq-item">
+        <div class="faq-q">问：是否需要注册或订阅才能阅读全部内容？</div>
+        <div class="faq-a">不需要。所有可见内容都可以直接阅读，没有隐藏付费区或会员专属标识。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">问：可以在手机上正常浏览吗？</div>
+        <div class="faq-a">可以。页面采用响应式设计，在手机和平板上会自动调整排版，阅读体验同样舒适。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">问：如何确保不会错过重要更新？</div>
+        <div class="faq-a">建议每隔一两周自行回访。由于站点没有推送机制，保持书签或笔记中的链接是最可靠的方式。</div>
+    </div>
+
+    <div class="footer-note">
+        MK体育 · 知识库入口 &nbsp;|&nbsp; 温和 · 持续 · 可靠
+    </div>
+
+</div>
+</body>
+</html>
