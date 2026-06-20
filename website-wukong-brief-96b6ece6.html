@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>悟空体育 · 服务说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans SC", Helvetica, Arial, sans-serif;
+            background-color: #f9f6f0;
+            color: #1f2a36;
+            line-height: 1.65;
+        }
+        .hero {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1d3449 50%, #141f2b 100%);
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 5% 7% 4% 7%;
+            border-bottom: 5px solid #d9b382;
+        }
+        .hero h1 {
+            font-size: clamp(2.6rem, 8vw, 4.6rem);
+            font-weight: 550;
+            letter-spacing: 0.02em;
+            color: #f2e7d5;
+            line-height: 1.2;
+            max-width: 12em;
+            margin-bottom: 0.5rem;
+        }
+        .hero p {
+            font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+            color: #bfd0de;
+            max-width: 32rem;
+            margin-top: 0.25rem;
+            font-weight: 350;
+        }
+
+        .container {
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 0 6%;
+        }
+
+        .intro-wrap {
+            background-color: #ffffff;
+            padding: 3.2rem 0 2.8rem 0;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.02);
+        }
+        .intro-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            justify-content: space-between;
+        }
+        .intro-card {
+            flex: 1 1 280px;
+            padding: 1.2rem 0;
+        }
+        .intro-card h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #1f2a36;
+            border-left: 5px solid #d9b382;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+        }
+        .intro-card p {
+            color: #2f3e4e;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .intro-card a {
+            color: #a5754a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-weight: 450;
+            transition: color 0.2s;
+        }
+        .intro-card a:hover {
+            color: #7a5b38;
+        }
+
+        .faq-summary {
+            background: #ebe6db;
+            padding: 2.8rem 0 3rem 0;
+            margin-top: 0;
+        }
+        .faq-summary h3 {
+            font-size: 1.6rem;
+            font-weight: 450;
+            color: #1f2a36;
+            margin-bottom: 1.8rem;
+            letter-spacing: 0.02em;
+        }
+        .faq-item {
+            margin-bottom: 1.6rem;
+            max-width: 780px;
+        }
+        .faq-item strong {
+            display: block;
+            font-weight: 540;
+            color: #253443;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        .faq-item p {
+            color: #2e3c4b;
+            margin-left: 1.2rem;
+        }
+
+        .footer-note {
+            background: #1b2836;
+            padding: 2.8rem 6%;
+            text-align: center;
+            color: #cfdbe5;
+            font-size: 0.95rem;
+            border-top: 1px solid #3f5061;
+        }
+        .footer-note a {
+            color: #d9b382;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-weight: 450;
+        }
+        .footer-note a:hover {
+            color: #f2dabc;
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                min-height: 40vh;
+                padding: 12% 6% 8% 6%;
+            }
+            .hero h1 {
+                font-size: clamp(2rem, 14vw, 2.8rem);
+            }
+            .container {
+                padding: 0 5%;
+            }
+            .intro-card {
+                flex: 1 1 100%;
+            }
+            .faq-item p {
+                margin-left: 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>悟空体育 · 平台速览</h1>
+        <p>从用户视角快速理解网站定位与核心功能</p>
+    </header>
+
+    <section class="intro-wrap">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-card">
+                    <h2>识别入口</h2>
+                    <p>初次访问时，最直接的问题是：这是一个做什么的平台？<br>
+                    <strong>悟空体育</strong> 聚焦于体育资讯与赛事数据整合，页面结构清晰，用户可在几秒内判断是否与自身需求匹配。无论关注竞技结果、赛事背景或运动知识，都能找到对应板块。</p>
+                </div>
+                <div class="intro-card">
+                    <h2>内容特征</h2>
+                    <p>网站内容以客观信息为主，涵盖多项运动的基础数据、赛程排列及简要分析。不渲染情绪，不鼓吹预测，而是提供可验证的参考素材。对于希望自行判断局势的浏览者，这类呈现方式更为实用。</p>
+                </div>
+                <div class="intro-card">
+                    <h2>浏览体验</h2>
+                    <p>页面布局偏重信息层级，视觉上减少干扰元素。导航分类直接，检索效率较高。如果正在寻找一个能快速获取体育背景资料、且界面不杂乱的站点，<a href="https://website-wukong.com">悟空体育</a> 值得花几分钟了解其内容编排逻辑。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-summary">
+        <div class="container">
+            <h3>常见问题摘要</h3>
+            <div class="faq-item">
+                <strong>网站提供哪些运动项目的信息？</strong>
+                <p>覆盖足球、篮球、网球、电竞等主流项目，同时包含部分综合赛事的基础资料。每项运动都有独立的分类页面。</p>
+            </div>
+            <div class="faq-item">
+                <strong>数据更新频率如何？</strong>
+                <p>赛程与结果数据随官方来源同步，原则上保持每日更新。具体时效可参考页面标注或按赛事阶段自行核对。</p>
+            </div>
+            <div class="faq-item">
+                <strong>是否需要注册才能浏览？</strong>
+                <p>无需注册即可阅读绝大部分内容。部分互动功能（如评论或收藏）可能要求登录，但信息浏览入口完全开放。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-note">
+        <p>若想进一步了解网站结构或内容分类，可直接前往 <a href="https://website-wukong.com">悟空体育</a> 查看首页导航与详情页。本站仅作介绍，不涉及任何投注或博彩引导。</p>
+    </footer>
+
+</body>
+</html>
